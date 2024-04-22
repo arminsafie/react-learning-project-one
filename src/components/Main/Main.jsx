@@ -1,7 +1,9 @@
 import { useState } from "react";
-import { CORE_CONCEPTS, EXAMPLES } from "../../data";
-import Coreconcept from "../coreConcept/coreConcept";
+import { EXAMPLES } from "../../data";
+// import Coreconcept from "../coreConcept/coreConcept";
 import TabButton from "../TabButton/TabButton";
+// eslint-disable-next-line no-unused-vars
+import coreConceptsSection from "../sections/coreConceptsSection";
 import "./Main.css";
 export default function Main() {
   const [mainTopic, setTopic] = useState();
@@ -10,14 +12,8 @@ export default function Main() {
   }
   return (
     <main>
-      <section id="core-concepts">
-        <h2>Core Concept</h2>
-        <ul>
-          {CORE_CONCEPTS.map((coreConcept) => (
-            <Coreconcept key={coreConcept.title} {...coreConcept} />
-          ))}
-        </ul>
-      </section>
+      <coreConceptsSection />
+
       <section id="examples">
         <h2>Examples</h2>
         <menu>
